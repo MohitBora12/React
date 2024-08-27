@@ -31,3 +31,23 @@ code {
 
   width: 100px;
 }
+
+.card {
+
+  border: 1px solid black;
+  width: 200px;
+  margin: 10px;
+  padding: 3px; 
+}
+
+.card > img{
+  width: 100%; 
+}
+
+.Restraunt-list{
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
