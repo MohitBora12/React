@@ -1,0 +1,7 @@
+Virtual Dom:
+
+Virtual Dom is a programming concept in which the representation a UI is kept in memory and synced in real DOM.
+
+It performs reconsiliation that is: It uses diff algorithm and finds the difference between the one tree and the other and then it re-renders only the required portion.
+
+Important-- Keys are used to uniquely identity the same type of elements. For example if we increase the number of divs then react will get confused and will re-render the entire component instead we can just pass the new div with a key so that react uniquely identifies it.
