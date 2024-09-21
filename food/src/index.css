@@ -42,12 +42,14 @@ code {
 
 .card > img{
   width: 100%; 
-}
+} 
 
-.Restraunt-list{
+.restaurant-list{
 
   display: flex;
   flex-wrap: wrap;
 }
+
+
 
 
