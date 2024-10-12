@@ -1,9 +1,19 @@
 import { useState } from "react";
 import restaurantList from "./config";
 import RestaurantCard from "./RestaurantCard";
+function filterData(searchInput, restaurants) {
+    
+    const filteredData = restaurants.filter((restaurant) => 
+        restaurant.data.name.includes(searchInput)
+    );
+
+    return filteredData;
+}
 const Body = () => {
     
-    const [searchInput,setSearchInput] = useState("KFC")
+    const [searchInput, setSearchInput] = useState("");
+    const [restaurants, SetRestaurant] = useState(restaurantList);
+
     return (
 
         <>
@@ -14,13 +24,22 @@ const Body = () => {
                         setSearchInput(e.target.value)
                     }} 
                 />
-                <button>Search</button>
+                <button 
+                
+                    onClick={() => {
+                        
+                        const data = filterData(searchInput, restaurants);
+
+                        SetRestaurant(data);
+
+                    }}
+                >Search</button>
 
             </div>
             
         <div className="restaurant-list">
             {
-                restaurantList.map((restaurant)=>{
+                restaurants.map((restaurant)=>{
                     return <RestaurantCard{...restaurant.data} key={
                         restaurant.data.id
                     }/>
